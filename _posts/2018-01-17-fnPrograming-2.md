@@ -27,14 +27,24 @@ for(var i =0; i<users.length; i++) {
 }
 
 //	1-2. 30세 이상인 users의 names를 수집한다.
-var 
+var names = [];
 for(var i =0; i<users.length; i++) {
-	
+	names.push(users[i].name);
 }
 
 //	1-3. 30세 미만인 users를 거른다.
-//	1-4. 30세 미만인 users의 names를 수집한다.
+var temp_users = [];
+for(var i =0; i<users.length; i++) {
+	if(user[i].age < 30) {
+    	temp_user.push(user[i]);
+    }
+}
 
+//	1-4. 30세 미만인 users의 names를 수집한다.
+var names = [];
+for(var i =0; i<users.length; i++) {
+	names.push(users[i].name);
+}
 
 
 ```
