@@ -4,9 +4,10 @@ categories:
 - JS
 ---
 # 함수형으로 전환하기<br/>
+
 ## map과 filter<br/>
 
-```javascript
+```js
 var users = [
 	{ id : 1, name : 'ID', age : 36 },
     { id : 2, name : 'BJ', age : 32 },
@@ -46,6 +47,4 @@ var names = [];
 for(var i =0; i<users.length; i++) {
 	names.push(users[i].name);
 }
-
-
 ```
