@@ -5,6 +5,7 @@ categories:
 ---
 # 함수형으로 전환하기<br/>
 ## map과 filter<br/>
+
 ```javascript
 var users = [
 	{ id : 1, name : 'ID', age : 36 },
