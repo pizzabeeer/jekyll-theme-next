@@ -47,4 +47,41 @@ var names = [];
 for(var i =0; i<users.length; i++) {
 	names.push(users[i].name);
 }
+
+// 2. _filter, _map으로 리펙토링
+
+// 추상화의 단위를 객체나 함수를 이용한다.
+function _filter(list, predi) {
+	var new_liet = [];
+	for(var i =0; i<list.length; i++) {
+    	// 변경이 많은 부분을 함수로 변경
+		if(predi(list[i])) {
+    		new_liet.push(list[i]);
+    	}
+	}
+	ruetnr new_list;
+}
+
+_filter(users, function(user) { return user.age >= 30; } );
+
+
+// 다형성이 높고 data가 어떤 형식인지 알지 못한다.
+function _map(list, mapper) {
+	var new_list = [];
+    for(var i=0; i<list.length; i++) {
+    	new_list.push(mapper[i]);
+    }
+    return new_list;
+}
+
+_map(users, function(user) { return user.naem } );
+
+// 함수형 프로그래밍은 대입문을 잘 사용하지 않는다.
+// 중간에 변경할 여지가 없기 때문에 안정성이 높다.
+_map(
+	_filter(users, function(user) { return user.age >= 30; } ),
+	, function(user) { return user.naem }
+);
+
+// 3. each만들기
 ```
